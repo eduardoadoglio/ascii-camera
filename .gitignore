@@ -1,0 +1,6 @@
+.vscode
+cmake*
+CMake*
+Makefile
+!CMakeLists.txt
+ascii-camera
