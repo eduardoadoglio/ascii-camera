@@ -30,7 +30,7 @@ int main() {
                 g = pixel[j][1];
                 b = pixel[j][0];
                 double brightness = (r+g+b)/3;
-                if (i % 20 == 0 && j % 20 == 0) {
+                if (i % 7 == 0 && j % 7 == 0) {
                     std::string asciiValue = asciiCamera.getAsciiValueForBrightness(brightness);
                     asciiCamera.writeAsciiToFrame(asciiValue, Point(j, i));
                 }

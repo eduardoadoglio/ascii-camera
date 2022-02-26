@@ -5,7 +5,7 @@
 
 class AsciiCamera {
     cv::Mat currentFrame;
-    std::string densityMapping = "Ñ@#W$9876543210?!abc;:+=-,._";
+    std::string densityMapping = "Ñ@#W$9876543210?!abc;:+=-,._               ";
     double slope = double(this->densityMapping.length() - 1) / 255;
 
     private:
@@ -21,7 +21,7 @@ class AsciiCamera {
             this->currentFrame = cv::Mat::zeros(width,height,CV_8U);
         }
         void writeAsciiToFrame(std::string asciiValue, cv::Point point) {
-            cv::putText(this->currentFrame, asciiValue, point, cv::FONT_HERSHEY_COMPLEX_SMALL, 0.7, cv::Scalar(255),1,8,false); 
+            cv::putText(this->currentFrame, asciiValue, point, cv::FONT_HERSHEY_COMPLEX_SMALL, 0.3, cv::Scalar(255),1,8,false); 
         }
         std::string getAsciiValueForBrightness(double brightness) {
             int index = this->getDensityIndexFromBrightness(brightness);
